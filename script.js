@@ -1,37 +1,28 @@
-// Получаем элементы
-const inputField = document.querySelector('.calculator input');
+const display = document.querySelector('.calculator input');
 const buttons = document.querySelectorAll('.calculator .buttons button');
 
-let currentInput = ''; // Переменная для хранения текущего ввода
+let currentInput = ''; 
 
-// Добавляем обработчики событий для кнопок
 buttons.forEach(button => {
     button.addEventListener('click', () => {
         const value = button.textContent;
 
         if (value === 'AC') {
-            // Очистка поля ввода
             currentInput = '';
         } else if (value === 'DEL') {
-            // Удаление последнего символа
             currentInput = currentInput.slice(0, -1);
         } else if (value === '=') {
             try {
-                // Вычисляем выражение
                 currentInput = eval(currentInput).toString();
             } catch (error) {
-                currentInput = 'Error'; // Показываем ошибку
+                currentInput = 'Error'; 
             }
         } else {
-            // Добавляем символ к вводу
             currentInput += value;
         }
-
-        // Обновляем поле ввода
-        inputField.value = currentInput;
+        display.value = currentInput;
     });
 });
-
 
 // Конвертер температуры
 let tempInput = document.getElementById('temp-input');
