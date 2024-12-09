@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator and Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="combined-calculator">
+    
+    <div class="calculator">
+        <input type="text" placeholder="0">
+        <div class="buttons">
+            <button>AC</button>
+            <button>%</button>
+            <button>/</button>
+            <button class="del">DEL</button>
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button>-</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>+</button>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>*</button>
+            <button>00</button>
+            <button>0</button>
+            <button>.</button>
+            <button class="equal">=</button>
+        </div>
+    </div>
+    <div class="converter">
+
+        <h2>Converter</h2>
+        <div class="conversion-block">
+            <label>Temperature (°C ↔ °F):</label>
+            <input type="text" placeholder="Enter value">
+            <select>
+                <option value="CtoF">Celsius to Fahrenheit</option>
+                <option value="FtoC">Fahrenheit to Celsius</option>
+            </select>
+            <button>Convert</button>
+        </div>
+        <div class="conversion-block">
+            <label>Distance (Km ↔ Mi):</label>
+            <input type="text" placeholder="Enter value">
+            <select>
+                <option value="KmToMi">Kilometers to Miles</option>
+                <option value="MiToKm">Miles to Kilometers</option>
+            </select>
+            <button>Convert</button>
+        </div>
+    </div>
+</div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+

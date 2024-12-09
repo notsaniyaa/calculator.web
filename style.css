@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #e6c1dd;
+    overflow-y: auto; 
+}
+
+.combined-calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ddd;
+    padding: 40px;
+    border-radius: 30px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    max-width: 400px; 
+    width: 100%; 
+    margin: 20px auto; 
+}
+
+.calculator {
+    margin-bottom: 30px;
+    width: 100%; 
+}
+
+.calculator input {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    text-align: right;
+    color: #520346;
+    background-color: #f9f9f9;
+}
+
+.calculator .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 1.2em;
+    background-color: #eaeaea;
+    color: #5d053a;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+.equal {
+    background-color: #a5dbe5;
+    color: #fff;
+}
+
+.equal:hover {
+    background-color: #518abc;
+}
+
+.del {
+    background-color: #f43669;
+    color: #fff;
+}
+
+.del:hover {
+    background-color: #e53581;
+}
+
+.converter h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #5d053a;
+}
+
+.conversion-block label {
+    display: block;
+    margin-bottom: 10px;
+    color: #520346;
+    font-weight: bold;
+}
+
+.conversion-block input,
+.conversion-block select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+}
+
+.conversion-block {
+    margin-bottom: 20px; 
+}
+
+.conversion-block button {
+    width: 100%;
+    background-color: #a5dbe5;
+    color: #fff;
+    font-size: 1.2em; 
+    padding: 15px; 
+    border-radius: 12px;
+    border: none; 
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.conversion-block button:hover {
+    background-color: #518abc;
+}
+
+
