@@ -1,7 +1,8 @@
+// Калькулятор
 const display = document.querySelector('.calculator input');
 const buttons = document.querySelectorAll('.calculator .buttons button');
 
-let currentInput = ''; 
+let currentInput = '';
 
 buttons.forEach(button => {
     button.addEventListener('click', () => {
@@ -15,7 +16,7 @@ buttons.forEach(button => {
             try {
                 currentInput = eval(currentInput).toString();
             } catch (error) {
-                currentInput = 'Error'; 
+                currentInput = 'Error';
             }
         } else {
             currentInput += value;
@@ -25,42 +26,42 @@ buttons.forEach(button => {
 });
 
 // Конвертер температуры
-let tempInput = document.getElementById('temp-input');
-let tempSelect = document.getElementById('temp-select');
-let tempOutput = document.getElementById('temp-output');
-let convertTempButton = document.getElementById('convert-temp');
+const tempInput = document.getElementById('temp-input');
+const tempSelect = document.getElementById('temp-select');
+const tempOutput = document.getElementById('temp-output');
+const convertTempButton = document.getElementById('convert-temp');
 
 convertTempButton.addEventListener('click', () => {
-    let value = parseFloat(tempInput.value);
+    const value = parseFloat(tempInput.value);
     if (isNaN(value)) {
         tempOutput.textContent = "Please enter a valid number.";
         return;
     }
 
     if (tempSelect.value === 'c-to-f') {
-        tempOutput.textContent = `Result: ${(value * 9/5 + 32).toFixed(2)} °F`;
+        tempOutput.textContent = Result: ${(value * 9 / 5 + 32).toFixed(2)} °F;
     } else if (tempSelect.value === 'f-to-c') {
-        tempOutput.textContent = `Result: ${((value - 32) * 5/9).toFixed(2)} °C`;
+        tempOutput.textContent = Result: ${((value - 32) * 5 / 9).toFixed(2)} °C;
     }
 });
 
 // Конвертер расстояния
-let distInput = document.getElementById('dist-input');
-let distSelect = document.getElementById('dist-select');
-let distOutput = document.getElementById('dist-output');
-let convertDistButton = document.getElementById('convert-dist');
+const distInput = document.getElementById('dist-input');
+const distSelect = document.getElementById('dist-select');
+const distOutput = document.getElementById('dist-output');
+const convertDistButton = document.getElementById('convert-dist');
 
 convertDistButton.addEventListener('click', () => {
-    let value = parseFloat(distInput.value);
+    const value = parseFloat(distInput.value);
     if (isNaN(value)) {
         distOutput.textContent = "Please enter a valid number.";
         return;
     }
 
     if (distSelect.value === 'km-to-mi') {
-        distOutput.textContent = `Result: ${(value * 0.621371).toFixed(2)} miles`;
+        distOutput.textContent = Result: ${(value * 0.621371).toFixed(2)} miles;
     } else if (distSelect.value === 'mi-to-km') {
-        distOutput.textContent = `Result: ${(value / 0.621371).toFixed(2)} kilometers`;
+        distOutput.textContent = Result: ${(value / 0.621371).toFixed(2)} kilometers;
     }
 });
 
